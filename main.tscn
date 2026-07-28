@@ -1,14 +1,12 @@
 [gd_scene format=3 uid="uid://dbffqnjbx4oox"]
 
-[ext_resource type="Script" uid="uid://bph27xnax6slb" path="res://Main.cs" id="1_ig7tw"]
-[ext_resource type="Script" uid="uid://cwjtroqhu6lb0" path="res://Resources/FeatureManagement/FeatureLayer.cs" id="2_0xm2m"]
+[ext_resource type="Script" uid="uid://bph27xnax6slb" path="res://Demo/Main.cs" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://trafcq6ahwhy" path="res://Flexiline/Rendering/FlexilineRenderer.cs" id="2_0xm2m"]
 
 [node name="SceneRoot" type="Node3D" unique_id=1059677405]
 script = ExtResource("1_ig7tw")
 
 [node name="VisibleObjects" type="Node3D" parent="." unique_id=1164159547]
 
-[node name="FeatureManagement" type="Node3D" parent="." unique_id=966661082]
-
-[node name="FeatureLayer" type="Node3D" parent="FeatureManagement" unique_id=2101993926]
+[node name="FlexilineRenderer" type="Node3D" parent="." unique_id=152778972]
 script = ExtResource("2_0xm2m")
