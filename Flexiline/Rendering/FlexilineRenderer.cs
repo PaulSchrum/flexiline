@@ -7,10 +7,9 @@ namespace Flexiline.Rendering;
 
 public partial class FlexilineRenderer : Node3D
 {
-    private static readonly Shader LinearElementShader =
-        GD.Load<Shader>(
-            "res://Flexiline/Rendering/LinearElement.gdshader"
-        );
+    private static readonly Shader LinearElementShader = 
+            GD.Load<Shader>(
+                "res://Flexiline/Shaders/LinearElement.gdshader");
 
     private readonly Dictionary<
         LinearElementBase,
