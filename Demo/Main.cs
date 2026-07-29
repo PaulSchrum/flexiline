@@ -38,11 +38,15 @@ namespace Demo
 
         private void CreateTestGeometry()
         {
+            var redSymb = new FLSymbology{ Color = Colors.Red };
+            var grnSymb = new FLSymbology{ Color = Colors.Green };
+            var bluSymb = new FLSymbology{ Color = Colors.Blue };
+
             var symbology = new FLSymbology();
             _renderer.Add(LineSegment.Create(
                     new Vector3(0.0f,0.0f,0.0f),
                     new Vector3(2.0f, 1.5f, 0.0f),
-                    symbology
+                    redSymb
                 )
             );
 
@@ -50,7 +54,7 @@ namespace Demo
                 LineSegment.Create(
                     new Vector3(-1.0f, 0.0f, 0.0f),
                     new Vector3(3.0f, 1.5f, 0.0f),
-                    symbology
+                    grnSymb
                 )
             );
 
@@ -58,7 +62,7 @@ namespace Demo
                 LineSegment.Create(
                     new Vector3(-2.0f, 1.0f, 0.0f),
                     new Vector3(3.0f, 1.5f, 0.0f ),
-                    symbology
+                    bluSymb
                 )
             );
         }
