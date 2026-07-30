@@ -27,7 +27,7 @@ namespace Demo
         {
             var camera = new Camera3D
             {
-                Projection = Camera3D.ProjectionType.Orthogonal, Size = 10.0f,
+                Projection = Camera3D.ProjectionType.Orthogonal, Size = 6.5f,
                         Position = new Vector3(6.0f, 4.0f, 8.0f),
                 Current = true
             };
@@ -38,33 +38,51 @@ namespace Demo
 
         private void CreateTestGeometry()
         {
-            var redSymb = new FLSymbology{ Color = Colors.Red };
-            var grnSymb = new FLSymbology{ Color = Colors.Green };
-            var bluSymb = new FLSymbology{ Color = Colors.Blue };
+            var redSymb = new FLSymbology{ Color = Colors.Red, Weight = 0 };
+            var grnSymb = new FLSymbology{ Color = Colors.Green, Weight = 7 };
+            var bluSymb = new FLSymbology{ Color = Colors.Blue, Weight = 15 };
 
             var symbology = new FLSymbology();
             _renderer.Add(LineSegment.Create(
                     new Vector3(0.0f,0.0f,0.0f),
                     new Vector3(2.0f, 1.5f, 0.0f),
-                    redSymb
-                )
-            );
+                    redSymb));
 
             _renderer.Add(
                 LineSegment.Create(
                     new Vector3(-1.0f, 0.0f, 0.0f),
-                    new Vector3(3.0f, 1.5f, 0.0f),
-                    grnSymb
-                )
-            );
+                    new Vector3(4.0f, 2.5f, 0.0f),
+                    grnSymb));
 
             _renderer.Add(
                 LineSegment.Create(
                     new Vector3(-2.0f, 1.0f, 0.0f),
                     new Vector3(3.0f, 1.5f, 0.0f ),
-                    bluSymb
-                )
-            );
+                    bluSymb));
+
+            _renderer.Add(
+                LineSegment.Create(
+                    new Vector3(-3.0f, 2.5f, 0.0f),
+                    new Vector3(3.0f, 2.5f, 0.0f),
+                    new FLSymbology{Color = Colors.White, Weight = 5}));
+
+            _renderer.Add(
+                LineSegment.Create(
+                    new Vector3(-2.5f, -2.0f, 0.0f),
+                    new Vector3(-2.5f, 2.0f, 0.0f),
+                    new FLSymbology{Color = Colors.Yellow, Weight = 5}));
+
+            _renderer.Add(
+                LineSegment.Create(
+                    new Vector3(1.5f, -2.0f, 0.0f),
+                    new Vector3(1.8f, -1.8f, 0.0f),
+                    new FLSymbology{Color = Colors.Cyan, Weight = 12}));
+
+            _renderer.Add(
+                LineSegment.Create(
+                    new Vector3(0.0f, -2.2f, 0.0f),
+                    new Vector3(0.0f, -2.2f, 0.0f),
+                    new FLSymbology{Color = Colors.Magenta, Weight = 15}));
         }
     }
 }

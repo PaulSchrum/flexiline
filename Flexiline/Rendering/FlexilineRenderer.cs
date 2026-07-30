@@ -124,5 +124,7 @@ public partial class FlexilineRenderer : Node3D
         material.SetShaderParameter("p2", lineSegment.EndPoint);
 
         material.SetShaderParameter("line_color", lineSegment.Symbology.Color);
+        material.SetShaderParameter("line_width_pixels", 
+                lineSegment.Symbology.Weight + 1.0f);
     }
 }
